@@ -1,0 +1,20 @@
+COPYRIGHTS
+==========
+
+sfWidgetFormPropelSelectGroupBy
+-------------------------------
+
+This software is a plugin for the symfony project.
+
+Url:       https://github.com/laMarciana/sfWidgetFormPropelSelectGroupBy 
+Copyright: Marc Busqué - marc@lamarciana.com
+License:   MIT - see LICENSE file
+
+symfony
+-------
+
+symfony is originally based on Mojavi3 by Sean Kerr <sean@code-box.org>
+
+Url:       http://www.symfony-project.com/
+Copyright: Fabien Potencier
+License:   MIT - see LICENSE file
