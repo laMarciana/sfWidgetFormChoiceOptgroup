@@ -39,6 +39,7 @@ class sfWidgetFormPropelSelectOptgroup extends sfWidgetFormPropelSelect
   protected function configure($options = array(), $attributes = array())
   {
     $this->addRequiredOption('optgroup_column');
+    $this->addOption('optgroup_method', null);
 
     parent::configure($options, $attributes);
   }
@@ -79,7 +80,12 @@ class sfWidgetFormPropelSelectOptgroup extends sfWidgetFormPropelSelect
       throw new RuntimeException(sprintf('Class "%s" must implement a "%s" method to be rendered in a "%s" widget', $this->getOption('model'), $methodValue, __CLASS__));
     }
 
-    $methodOptgroup = 'get'.$this->getOption('optgroup_column');
+    if (!$this->getOption('optgroup_method')) {
+       $methodOptgroup = 'get'.$this->getOption('optgroup_column');
+    } else {
+       $methodOptgroup = $this->getOption('optgroup_method');
+    }
+    //$methodOptgroup = 'get'.$this->getOption('optgroup_column');
     if (!method_exists($this->getOption('model'), $methodOptgroup))
     {
       throw new RuntimeException(sprintf('Class "%s" must implement a "%s" method to be rendered in a "%s" widget', $this->getOption('model'), $methodOptgroup, __CLASS__));
