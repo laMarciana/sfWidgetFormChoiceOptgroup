@@ -1,6 +1,8 @@
 <?php
 
 /*
+ * (c) Marc Busqué <marc@lamarciana.com>
+ *
  * This file is part of the symfony package.
  * (c) Fabien Potencier <fabien.potencier@symfony-project.com>
  *
@@ -9,19 +11,21 @@
  */
 
 /**
- * sfWidgetFormPropelSelectManyOptgroup represents a select HTML tag for a model.
+ * sfWidgetFormDoctrineChoiceManyOptgroup represents a select HTML tag for a model.
  *
  * @package    symfony
  * @subpackage widget
  * @author     Marc Busqué <marc@lamarciana.com>
+ * @link       https://github.com/laMarciana/sfWidgetFormChoiceOptgroup
+ * @license    MIT
  */
-class sfWidgetFormPropelSelectManyOptgroup extends sfWidgetFormPropelSelectOptgroup
+class sfWidgetFormDoctrineChoiceManyOptgroup extends sfWidgetFormChoiceOptgroup
 {
   /**
    * @param array $options     An array of options
    * @param array $attributes  An array of default HTML attributes
    *
-   * @see sfWidgetFormPropelSelectOptgroup
+   * @see sfWidgetFormDoctrineChoiceOptgroup
    */
   protected function configure($options = array(), $attributes = array())
   {

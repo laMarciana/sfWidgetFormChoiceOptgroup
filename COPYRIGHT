@@ -1,12 +1,12 @@
 COPYRIGHTS
 ==========
 
-sfWidgetFormPropelSelectGroupBy
+sfWidgetFormChoiceOptgroup
 -------------------------------
 
 This software is a plugin for the symfony project.
 
-Url:       https://github.com/laMarciana/sfWidgetFormPropelSelectGroupBy 
+Url:       https://github.com/laMarciana/sfWidgetFormChoiceOptgroup
 Copyright: Marc Busqué - marc@lamarciana.com
 License:   MIT - see LICENSE file
 

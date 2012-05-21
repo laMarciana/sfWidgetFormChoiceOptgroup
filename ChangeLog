@@ -1,5 +1,11 @@
 2012-05-21  Marc Busqué  <marc@lamarciana.com>
 
+* Version 2.0, for Symfony 1.4
+* Add sfWidgetForm[Propel,Doctrine]ChoiceOptgroup and
+sfWidgetForm[Propel,Doctrine]ChoiceManyOptgroup
+
+2012-05-21  Marc Busqué  <marc@lamarciana.com>
+
 * Version 1.5
 * Add 'optgroup_method' option
 
