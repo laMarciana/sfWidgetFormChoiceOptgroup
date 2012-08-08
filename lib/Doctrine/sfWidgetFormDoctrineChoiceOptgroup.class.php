@@ -106,7 +106,14 @@ class sfWidgetFormDoctrineChoiceOptgroup extends sfWidgetFormDoctrineChoice
 
       foreach ($objects as $object)
       {
-         $choices[$object->$methodOptgroup()][$object->$keyMethod()] = $object->$method();
+        if (!$object->$methodOptgroup())
+        {
+          $choices[$object->$keyMethod()] = $object->$method();
+        }
+        else
+        {
+          $choices[$object->$methodOptgroup()][$object->$keyMethod()] = $object->$method();
+        }
       }
 
       return $choices;
