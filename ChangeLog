@@ -1,3 +1,9 @@
+2013-03-27  qpautrat
+
+* Version 2.0.1
+* Fix empty optgroup
+* Fix methodOptGroup overwriting
+
 2012-05-21  Marc Busqué  <marc@lamarciana.com>
 
 * Version 2.0, for Symfony 1.4
