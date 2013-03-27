@@ -100,14 +100,20 @@ class sfWidgetFormDoctrineChoiceOptgroup extends sfWidgetFormDoctrineChoice
 
       if (!$this->getOption('optgroup_method')) {
          $methodOptgroup = 'get'.$this->getOption('optgroup_column');
-         $methodOptgroup = 'getAnswer';
       } else {
          $methodOptgroup = $this->getOption('optgroup_method');
       }
 
       foreach ($objects as $object)
       {
-         $choices[$object->$methodOptgroup()][$object->$keyMethod()] = $object->$method();
+        if (!$object->$methodOptgroup())
+        {
+          $choices[$object->$keyMethod()] = $object->$method();
+        }
+        else
+        {
+          $choices[$object->$methodOptgroup()][$object->$keyMethod()] = $object->$method();
+        }
       }
 
       return $choices;
